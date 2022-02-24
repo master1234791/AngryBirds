@@ -22,7 +22,7 @@ function preload(){
   backgroundImg = loadImage("bg.png");
   bg2 = loadImage("bg2.jpg");
   bg3 = loadImage("bg3.png");
-  getBackgroundImg();
+  //getBackgroundImg();
 }
 
 function setup() {
