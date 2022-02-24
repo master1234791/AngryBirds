@@ -3,6 +3,7 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 var gameState = "onSling";
+var score = 0;
 var engine, world;
 var ground;
 var box1;
@@ -54,7 +55,10 @@ slingshot = new Slingshot(bird.body,{x:200,y:50});
 }
 function draw() {
   if(backgroundImg);
-  background(backgroundImg);  
+  background(backgroundImg);
+  textSize(50);
+  fill("brown");
+  text(score,1000,50);
   Engine.update(engine);
   ground.display();
   box1.display();
@@ -87,6 +91,7 @@ function mouseReleased(){
 function keyPressed(){
   if(keyCode == 32) {
     bird.trajectory =[];
+    score ++;
     Matter.Body.setPosition(bird.body,{x:200, y:50});
     slingshot.attach(bird.body);
     gameState = "onSling"
