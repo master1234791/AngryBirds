@@ -88,14 +88,14 @@ function mouseReleased(){
   slingshot.fly();
   gameState = "launched"
 }
-function keyPressed(){
-  if(keyCode == 32) {
+function mousePressed()
+  //if(keyCode == 32) {
     bird.trajectory =[];
     score ++;
     Matter.Body.setPosition(bird.body,{x:200, y:50});
     slingshot.attach(bird.body);
     gameState = "onSling"
-  }
+ // }
 }
 async function getBackgroundImg() {
   var response = await fetch("http://worldtimeapi.org/api/timezone/America/Mexico");
