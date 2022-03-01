@@ -88,7 +88,7 @@ function mouseReleased(){
   slingshot.fly();
   gameState = "launched"
 }
-function mousePressed()
+function mousePressed(){
   //if(keyCode == 32) {
     bird.trajectory =[];
     score ++;
